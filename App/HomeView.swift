@@ -57,7 +57,7 @@ struct HomeView: View {
                                         .scaledToFill()
                                         .frame(width: 25, height: 25, alignment: .center)
                                     
-                                    Text("3")
+                                    Text("1")
                                         .font(Font.system(size: 13, weight: .bold))
                                         .frame(width:18, height:18)
                                         .background(Color.red)
