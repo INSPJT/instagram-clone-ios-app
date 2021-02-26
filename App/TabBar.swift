@@ -19,14 +19,14 @@ struct TabBar: View {
             HomeView()
                 .tabItem {
                     //selection == 0 ? Image("home") : Image("home")
-                    Selection == 0 ? Image(systemName: "star.circle.fill") :
-                    Image(systemName: "star.circle")
+                    Selection == 0 ? Image("home-selected") :
+                    Image("home")
                 }
                 .tag(0)
             ProfileView()
                 .tabItem {
-                    Selection == 1 ? Image(systemName: "folder.circle") :
-                        Image(systemName: "folder.circle")
+                    Selection == 1 ? Image( "user-selected") :
+                        Image("user")
                 }
                 .tag(1)
         }

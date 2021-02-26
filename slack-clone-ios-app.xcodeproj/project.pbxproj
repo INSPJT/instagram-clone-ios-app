@@ -16,7 +16,7 @@
 		7281006F25E694B300F917CB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7281006E25E694B300F917CB /* ProfileView.swift */; };
 		7281007425E6952A00F917CB /* InstaClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7281007325E6952A00F917CB /* InstaClone.swift */; };
 		7281007C25E6A02400F917CB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7281007B25E6A02400F917CB /* TabBar.swift */; };
-		72A15EC525E7EE1B00ABD795 /* StoyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A15EC425E7EE1B00ABD795 /* StoyDataModel.swift */; };
+		72A15EC525E7EE1B00ABD795 /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A15EC425E7EE1B00ABD795 /* StoryDataModel.swift */; };
 		72A15ECA25E7EE5E00ABD795 /* ProfilePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A15EC925E7EE5E00ABD795 /* ProfilePostModel.swift */; };
 		72A15ECF25E7EEAA00ABD795 /* PostDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A15ECE25E7EEAA00ABD795 /* PostDataModel.swift */; };
 		72A15ED525E7F0C700ABD795 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A15ED425E7F0C700ABD795 /* StoryView.swift */; };
@@ -58,7 +58,7 @@
 		7281006E25E694B300F917CB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7281007325E6952A00F917CB /* InstaClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaClone.swift; sourceTree = "<group>"; };
 		7281007B25E6A02400F917CB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		72A15EC425E7EE1B00ABD795 /* StoyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoyDataModel.swift; sourceTree = "<group>"; };
+		72A15EC425E7EE1B00ABD795 /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
 		72A15EC925E7EE5E00ABD795 /* ProfilePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostModel.swift; sourceTree = "<group>"; };
 		72A15ECE25E7EEAA00ABD795 /* PostDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataModel.swift; sourceTree = "<group>"; };
 		72A15ED425E7F0C700ABD795 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		72A15EB825E7EBA300ABD795 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				72A15EC425E7EE1B00ABD795 /* StoyDataModel.swift */,
+				72A15EC425E7EE1B00ABD795 /* StoryDataModel.swift */,
 				72A15EC925E7EE5E00ABD795 /* ProfilePostModel.swift */,
 				72A15ECE25E7EEAA00ABD795 /* PostDataModel.swift */,
 			);
@@ -329,7 +329,7 @@
 				72A15EE525E7F28C00ABD795 /* StoryData.swift in Sources */,
 				63D8AE5425CD86CE004F9F5D /* slack_clone_ios_appApp.swift in Sources */,
 				7281007C25E6A02400F917CB /* TabBar.swift in Sources */,
-				72A15EC525E7EE1B00ABD795 /* StoyDataModel.swift in Sources */,
+				72A15EC525E7EE1B00ABD795 /* StoryDataModel.swift in Sources */,
 				72A15EDA25E7F0DD00ABD795 /* PostView.swift in Sources */,
 				72A15EE025E7F1E500ABD795 /* PostData.swift in Sources */,
 				72A15ECF25E7EEAA00ABD795 /* PostDataModel.swift in Sources */,
