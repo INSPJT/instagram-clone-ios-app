@@ -7,10 +7,10 @@
 
 import Foundation
 
-var StoryData:[StroryDataModel] = [
-    StroryDataModel(image: "demo", name: "Your Story", isSeen: false, myStory:true ,myStoryActive: false),
-    StroryDataModel(image: "user1", name: "shubham_iosdev", isSeen: false, myStory:false ,myStoryActive: false),
-    StroryDataModel(image: "user2", name: "martinsoft", isSeen: false, myStory:false ,myStoryActive: false),
-    StroryDataModel(image: "user3", name: "edouard_iosdev", isSeen: false, myStory:false ,myStoryActive: false),
-    StroryDataModel(image: "user4", name: "ananjai04", isSeen: true, myStory:false ,myStoryActive: false),
+var StoryData:[StoyDataModel] = [
+    StoyDataModel(image: "demo", name: "Your Story", isSeen: false, myStory:true ,myStoryActive: false),
+    StoyDataModel(image: "user1", name: "shubham_iosdev", isSeen: false, myStory:false ,myStoryActive: false),
+    StoyDataModel(image: "user2", name: "martinsoft", isSeen: false, myStory:false ,myStoryActive: false),
+    StoyDataModel(image: "user3", name: "edouard_iosdev", isSeen: false, myStory:false ,myStoryActive: false),
+    StoyDataModel(image: "user4", name: "ananjai04", isSeen: true, myStory:false ,myStoryActive: false),
 ]

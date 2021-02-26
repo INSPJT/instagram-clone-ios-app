@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StroryDataModel: Identifiable {
+struct StoyDataModel: Identifiable {
     var id = UUID()
     var image: String
     var name: String
