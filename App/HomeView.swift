@@ -27,7 +27,7 @@ struct HomeView: View {
                     }
                 }//: GRID
             }//: SCROLL
-            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarTitle("ㅁㄴㅇㅂㅈㄷ", displayMode: .inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Image("logo")
@@ -39,15 +39,21 @@ struct HomeView: View {
         
                     ToolbarItem(placement: .navigationBarTrailing) {
                         HStack(alignment:.center, spacing:25){
-                            Button(action:{
-                                print("Go to Search")
+                            /*Button(action:{
+                                print("SEARCH")
                             }){
                                 Image("search")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 25, height: 25, alignment: .center)
                             }
-                            
+                            */
+                            NavigationLink(destination: SearchView()){
+                                Image("search")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 25, height: 25, alignment: .center)
+                            }
                             Button(action:{
                                 print("Go to messages")
                             }){

@@ -23,6 +23,7 @@
 		72A15EDA25E7F0DD00ABD795 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A15ED925E7F0DD00ABD795 /* PostView.swift */; };
 		72A15EE025E7F1E500ABD795 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A15EDF25E7F1E500ABD795 /* PostData.swift */; };
 		72A15EE525E7F28C00ABD795 /* StoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A15EE425E7F28C00ABD795 /* StoryData.swift */; };
+		72CCD20625EA6E780070ED48 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCD20525EA6E780070ED48 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		72A15ED925E7F0DD00ABD795 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		72A15EDF25E7F1E500ABD795 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		72A15EE425E7F28C00ABD795 /* StoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryData.swift; sourceTree = "<group>"; };
+		72CCD20525EA6E780070ED48 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				7281006625E694A300F917CB /* HomeView.swift */,
 				7281006E25E694B300F917CB /* ProfileView.swift */,
 				7281007325E6952A00F917CB /* InstaClone.swift */,
+				72CCD20525EA6E780070ED48 /* SearchView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				72A15EE525E7F28C00ABD795 /* StoryData.swift in Sources */,
 				63D8AE5425CD86CE004F9F5D /* slack_clone_ios_appApp.swift in Sources */,
 				7281007C25E6A02400F917CB /* TabBar.swift in Sources */,
+				72CCD20625EA6E780070ED48 /* SearchView.swift in Sources */,
 				72A15EC525E7EE1B00ABD795 /* StoryDataModel.swift in Sources */,
 				72A15EDA25E7F0DD00ABD795 /* PostView.swift in Sources */,
 				72A15EE025E7F1E500ABD795 /* PostData.swift in Sources */,
