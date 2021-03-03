@@ -1,5 +1,6 @@
 //
 //  ContentView.swift
+//  SwiftUI_Insta_Clone
 //
 //  Created by 황지웅 on 2021/02/28.
 //
@@ -10,9 +11,9 @@ import SwiftUI
 struct ContentView: View {
     //@State
     let people: [Person] = [
-        Person(name: "mrGlasses", image: "sm-laptop"),
-        Person(name: "Glasses", image: "sm-laptop-drawing"),
-        Person(name: "mres", image: "sm-puzzle")
+        Person(name: "Jiwoong Hwang", image: "sm-laptop"),
+        Person(name: "Geon Uk Park", image: "sm-drawing"),
+        Person(name: "0z Ku", image: "sm-puzzle")
     ]
     var body: some View {
         GeometryReader{geometry in
