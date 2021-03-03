@@ -12,7 +12,7 @@ import SwiftUI
 struct slack_clone_ios_appApp: App {
     var body: some Scene {
         WindowGroup {
-            TabBar()
+            ContentView()
         }
     }
 }
