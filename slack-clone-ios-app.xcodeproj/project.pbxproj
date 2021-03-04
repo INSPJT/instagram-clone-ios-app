@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6396ED9D25F1267D00AA87E7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6396ED9C25F1267D00AA87E7 /* LoginView.swift */; };
 		63D8AE5425CD86CE004F9F5D /* slack_clone_ios_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8AE5325CD86CE004F9F5D /* slack_clone_ios_appApp.swift */; };
 		63D8AE5825CD86CE004F9F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D8AE5725CD86CE004F9F5D /* Assets.xcassets */; };
 		63D8AE5B25CD86CE004F9F5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D8AE5A25CD86CE004F9F5D /* Preview Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6396ED9C25F1267D00AA87E7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		63D8AE5025CD86CE004F9F5D /* slack-clone-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "slack-clone-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D8AE5325CD86CE004F9F5D /* slack_clone_ios_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slack_clone_ios_appApp.swift; sourceTree = "<group>"; };
 		63D8AE5725CD86CE004F9F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,9 +106,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6396ED9625F11EE900AA87E7 /* dummy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = dummy;
+			sourceTree = "<group>";
+		};
+		6396ED9A25F122EE00AA87E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6396ED9B25F1266600AA87E7 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				6396ED9C25F1267D00AA87E7 /* LoginView.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		63D8AE4725CD86CE004F9F5D = {
 			isa = PBXGroup;
 			children = (
+				6396ED9625F11EE900AA87E7 /* dummy */,
 				72CC095725EFB68A00FD68C0 /* Fonts */,
 				729CC94C25EFB4F6008771DA /* Common */,
 				729CC93525EFB4E2008771DA /* Screens */,
@@ -237,6 +262,7 @@
 		729CC94C25EFB4F6008771DA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6396ED9A25F122EE00AA87E7 /* Resources */,
 				729CC94D25EFB4F6008771DA /* ViewModifier */,
 				729CC95325EFB4F6008771DA /* Model */,
 				729CC95525EFB4F6008771DA /* Views */,
@@ -281,6 +307,7 @@
 		729CC95525EFB4F6008771DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6396ED9B25F1266600AA87E7 /* login */,
 				729CC95625EFB4F6008771DA /* Thumb */,
 				729CC95925EFB4F6008771DA /* Text */,
 				729CC95B25EFB4F6008771DA /* Nav */,
@@ -463,6 +490,7 @@
 				729CC94625EFB4E2008771DA /* PersonFooterView.swift in Sources */,
 				729CC96425EFB4F6008771DA /* NavView.swift in Sources */,
 				729CC94525EFB4E2008771DA /* FooterAction.swift in Sources */,
+				6396ED9D25F1267D00AA87E7 /* LoginView.swift in Sources */,
 				729CC95E25EFB4F6008771DA /* ChangeImageColor.swift in Sources */,
 				729CC96225EFB4F6008771DA /* StoryView.swift in Sources */,
 				729CC96125EFB4F6008771DA /* PersonThumb.swift in Sources */,
@@ -637,7 +665,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pjt.slack-clone-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -658,7 +686,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pjt.slack-clone-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

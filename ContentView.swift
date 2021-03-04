@@ -15,6 +15,7 @@ struct ContentView: View {
         Person(name: "Geon Uk Park", image: "sm-drawing"),
         Person(name: "0z Ku", image: "sm-puzzle")
     ]
+    
     var body: some View {
         GeometryReader{geometry in
             let colWidth = geometry.size.width / 3
@@ -42,7 +43,6 @@ struct ContentView: View {
                     }
                     .navigationBarHidden(true)
                 }
-                
                 .tabItem {
                     Image(systemName: "house.fill")
                 }
@@ -76,7 +76,6 @@ struct ContentView: View {
                 }
                 NavigationView{
                     VStack{
-                    
                     }
             
                 }
@@ -91,6 +90,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        //if 문달아서 로그인했는지 안했는지 파악
         ContentView()
     }
 }
