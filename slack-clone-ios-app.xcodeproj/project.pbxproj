@@ -120,12 +120,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		6396ED9B25F1266600AA87E7 /* login */ = {
+		6396ED9B25F1266600AA87E7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				6396ED9C25F1267D00AA87E7 /* LoginView.swift */,
 			);
-			path = login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		63D8AE4725CD86CE004F9F5D = {
@@ -307,7 +307,7 @@
 		729CC95525EFB4F6008771DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6396ED9B25F1266600AA87E7 /* login */,
+				6396ED9B25F1266600AA87E7 /* Login */,
 				729CC95625EFB4F6008771DA /* Thumb */,
 				729CC95925EFB4F6008771DA /* Text */,
 				729CC95B25EFB4F6008771DA /* Nav */,
@@ -434,6 +434,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 63D8AE4725CD86CE004F9F5D;
 			productRefGroup = 63D8AE5125CD86CE004F9F5D /* Products */;

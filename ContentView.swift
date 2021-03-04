@@ -7,6 +7,8 @@
 //
 
 import SwiftUI
+import Foundation
+import Combine
 
 struct ContentView: View {
     //@State

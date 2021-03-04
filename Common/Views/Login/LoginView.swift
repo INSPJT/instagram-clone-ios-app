@@ -15,15 +15,19 @@ struct LoginContentView: View {
     @State var username: String = ""
     @State var password: String = ""
     
+    @Binding var isLogin : Bool
+    
     var line : some View{
         VStack {
             Divider().background(lightGreyColor)
         }
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 22)
     }
     
     var body: some View {
         VStack{
+            Spacer()
+            
             Text("InstaClone")
                 .font(.custom("OleoScript-Regular", size: 50))
                 .padding(.bottom, 20)
@@ -39,7 +43,10 @@ struct LoginContentView: View {
                 .cornerRadius(5.0)
                 .padding(.bottom, 10)
                 .padding(.horizontal, 20)
-            Text("Log in")
+            
+            Button(LocalizedStringKey("Log in"), action:{
+                self.isLogin = true;
+            })
                 .font(.system(size:15))
                 .foregroundColor(.white)
                 .frame(width: 280, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -67,12 +74,16 @@ struct LoginContentView: View {
                 Image(systemName: "applelogo")
                 Text("Log in with Apple")
             }
+            
             Spacer()
+            
             HStack{
                 Text("Don't hava an account?")
                     .fontWeight(.light)
-                    .font(.system(size:10))
-                Text("Sign up.")                   .font(.system(size:10))
+                    .font(.system(size:12))
+                Text("Sign up.")
+                    .font(.system(size:12))
+                    
             }
             .minimumScaleFactor(0.001)
             .frame(maxWidth:.infinity)
@@ -83,8 +94,10 @@ struct LoginContentView: View {
     }
 }
 
-struct LoginContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginContentView()
-    }
-}
+//struct LoginContentView_Previews: PreviewProvider {
+//    
+//    
+//    static var previews: some View {
+//        LoginContentView(isLogin: false)
+//    }
+//}

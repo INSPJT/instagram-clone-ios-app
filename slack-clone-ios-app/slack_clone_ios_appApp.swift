@@ -10,9 +10,15 @@ import SwiftUI
 
 @main
 struct slack_clone_ios_appApp: App {
+    @State private var isLogin = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isLogin == false {
+                LoginContentView(isLogin : $isLogin)
+            } else{
+                ContentView()
+            }
         }
     }
 }
