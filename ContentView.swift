@@ -78,6 +78,7 @@ struct ContentView: View {
                 }
                 NavigationView{
                     VStack{
+                        MyPageContentView()
                     }
             
                 }

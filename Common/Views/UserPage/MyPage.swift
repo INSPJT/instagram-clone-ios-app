@@ -119,6 +119,7 @@ struct MyPageContentView : View {
                 HStack{
                     
                 }
+                Spacer()
             }
         }
     }
