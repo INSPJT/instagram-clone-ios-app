@@ -22,8 +22,11 @@ let introduce : String = "Wellcome Hello World"
 var isPrivate : Bool = true
 
 struct MyPageContentView : View {
+    let width = (UIScreen.main.bounds.width/2)
+    var toogle : Bool = true
+    
     var body: some View{
-        GeometryReader { geometry in
+        ScrollView{
             VStack{
                 HStack{
                     if isPrivate {
@@ -32,7 +35,7 @@ struct MyPageContentView : View {
                     }
                     Text(myInfo.name)
                         .font(.system(size: 24))
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
                     
                     Image(systemName: "chevron.down")
                         .resizable()
@@ -89,9 +92,9 @@ struct MyPageContentView : View {
                     })
                     .font(.system(size:15))
                     .foregroundColor(.black)
-                    .frame(width: geometry.size.width/2 - 12.5, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width: width - 16, height: 30, alignment: .center)
                     .cornerRadius(10)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 0.5)
+                    .border(Color.black, width: 0.5)
                     .padding(.leading, 10)
                     
                     Button(LocalizedStringKey("저장됨"), action:{
@@ -99,10 +102,10 @@ struct MyPageContentView : View {
                     })
                     .font(.system(size:15))
                     .foregroundColor(.black)
-                    .frame(width: geometry.size.width/2 - 12.5, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width: width - 17, height: 30, alignment: .center)
                     .cornerRadius(10)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 0.5)
-                    .padding(.trailing, 10)
+                    .border(Color.black, width: 0.5)
+                    .padding(.trailing, 10.0)
                 }
                 HStack {
                     VStack(alignment: .leading){
@@ -117,7 +120,40 @@ struct MyPageContentView : View {
                     //StoryView(people: people)
                 }
                 HStack{
-                    
+                    VStack{
+                        
+                    }
+                }
+                HStack{
+                    if toogle {
+                        VStack(spacing: 3){
+                            ForEach(0..<Post.postsURL.count/3){i in
+                                HStack(spacing: 3){
+                                    ForEach(0..<3){j in
+                                        let idx : Int = i + j + (i * 2)
+                
+                                        if  idx < Post.postsURL.count{
+                                            MyPostsContentView(imageURL: Post.postsURL[idx].imageURL)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        VStack(spacing: 3){
+                            ForEach(0..<Post.taggedURL.count/3){i in
+                                HStack(spacing: 3){
+                                    ForEach(0..<3){j in
+                                        let idx : Int = i + j + (i * 2)
+                
+                                        if  idx < Post.postsURL.count{
+                                            MyPostsContentView(imageURL: Post.taggedURL[idx].imageURL)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 Spacer()
             }
