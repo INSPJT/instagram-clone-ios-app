@@ -15,7 +15,7 @@ struct LoginContentView: View {
     @State var username: String = ""
     @State var password: String = ""
     
-    @Binding var isLogin : Bool
+    @Binding var isSignin : Bool
     
     var line : some View{
         VStack {
@@ -45,7 +45,7 @@ struct LoginContentView: View {
                 .padding(.horizontal, 20)
             
             Button(LocalizedStringKey("Log in"), action:{
-                self.isLogin = true;
+                self.Verify()
             })
                 .font(.system(size:15))
                 .foregroundColor(.white)
@@ -92,12 +92,30 @@ struct LoginContentView: View {
             
         }
     }
+    
+    func Verify(){
+        if self.username != "" && self.password != "" {
+            let postRequest = APIRequest(endpoint: "auth/signin")
+            let signinInfo = SigninMessage(username: self.username, password: self.password)
+            postRequest.signin(signinInfo, completion: { result in
+                switch result {
+                case .success(let message):
+                    print("success")
+                    self.isSignin = true
+                case .failure(let error):
+                    print("An error occured \(error)")
+                }
+            })
+        } else {
+            //로그인 에러 화면
+        }
+    }
 }
 
 //struct LoginContentView_Previews: PreviewProvider {
-//    
-//    
+//
+//
 //    static var previews: some View {
-//        LoginContentView(isLogin: false)
+//        LoginContentView()
 //    }
 //}

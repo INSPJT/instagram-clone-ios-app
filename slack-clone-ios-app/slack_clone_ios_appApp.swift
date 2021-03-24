@@ -15,7 +15,7 @@ struct slack_clone_ios_appApp: App {
     var body: some Scene {
         WindowGroup {
             if isLogin == false {
-                LoginContentView(isLogin : $isLogin)
+                LoginContentView(isSignin : $isLogin)
             } else{
                 ContentView()
             }
