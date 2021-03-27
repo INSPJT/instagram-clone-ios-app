@@ -96,7 +96,7 @@ struct LoginContentView: View {
     func Verify(){
         if self.username != "" && self.password != "" {
             let postRequest = APIRequest(endpoint: "auth/signin")
-            let signinInfo = SigninMessage(username: self.username, password: self.password)
+            let signinInfo = SigninMessage(username: "geonuk@a.com", password: "1q2w3e4r!!")
             postRequest.signin(signinInfo, completion: { result in
                 switch result {
                 case .success(let message):
