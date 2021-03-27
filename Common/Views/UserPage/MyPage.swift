@@ -27,10 +27,11 @@ struct MyPageContentView : View {
     
     var body: some View{
         ScrollView{
-            VStack{
+            VStack(spacing: 0){
                 InfoHeader()
                 
                 UserInfo()
+                
                 myPostsView(index: self.$index)
                 
                 Spacer()
@@ -174,7 +175,7 @@ struct myPostsView : View {
 
 //struct PostsDatas : View {
 //    @Binding var data : [Post] = nil
-//    
+//
 //    var body: some View {
 //        VStack(spacing: 3){
 //            ForEach(0..<data.postsURL.count/3){i in
