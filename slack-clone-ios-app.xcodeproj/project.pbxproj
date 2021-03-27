@@ -11,11 +11,11 @@
 		6396EDAC25F8F3AC00AA87E7 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6396EDAB25F8F3AC00AA87E7 /* MyPage.swift */; };
 		6396EDC025FF926F00AA87E7 /* MyPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6396EDBF25FF926F00AA87E7 /* MyPosts.swift */; };
 		6396EDC525FF928400AA87E7 /* TagedPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6396EDC425FF928400AA87E7 /* TagedPosts.swift */; };
-		63C406F725FF9A5400BC6070 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C406F625FF9A5400BC6070 /* Post.swift */; };
 		63C40704260B69FF00BC6070 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C40703260B69FF00BC6070 /* SigninViewModel.swift */; };
 		63C4070F260B7FF200BC6070 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4070E260B7FF200BC6070 /* RequestAPI.swift */; };
 		63C40714260B830B00BC6070 /* SigninMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C40713260B830B00BC6070 /* SigninMessage.swift */; };
 		63C40719260B8FB600BC6070 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C40718260B8FB600BC6070 /* AuthToken.swift */; };
+		63C40721260F513700BC6070 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C40720260F513700BC6070 /* Post.swift */; };
 		63D8AE5425CD86CE004F9F5D /* slack_clone_ios_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8AE5325CD86CE004F9F5D /* slack_clone_ios_appApp.swift */; };
 		63D8AE5825CD86CE004F9F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D8AE5725CD86CE004F9F5D /* Assets.xcassets */; };
 		63D8AE5B25CD86CE004F9F5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D8AE5A25CD86CE004F9F5D /* Preview Assets.xcassets */; };
@@ -62,11 +62,11 @@
 		6396EDAB25F8F3AC00AA87E7 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
 		6396EDBF25FF926F00AA87E7 /* MyPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPosts.swift; sourceTree = "<group>"; };
 		6396EDC425FF928400AA87E7 /* TagedPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagedPosts.swift; sourceTree = "<group>"; };
-		63C406F625FF9A5400BC6070 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../../../../../Documents/Post.swift; sourceTree = "<group>"; };
 		63C40703260B69FF00BC6070 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
 		63C4070E260B7FF200BC6070 /* RequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
 		63C40713260B830B00BC6070 /* SigninMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninMessage.swift; sourceTree = "<group>"; };
 		63C40718260B8FB600BC6070 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		63C40720260F513700BC6070 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		63D8AE5025CD86CE004F9F5D /* slack-clone-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "slack-clone-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D8AE5325CD86CE004F9F5D /* slack_clone_ios_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slack_clone_ios_appApp.swift; sourceTree = "<group>"; };
 		63D8AE5725CD86CE004F9F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -353,8 +353,8 @@
 			children = (
 				63C40718260B8FB600BC6070 /* AuthToken.swift */,
 				729CC95425EFB4F6008771DA /* Person.swift */,
-				63C406F625FF9A5400BC6070 /* Post.swift */,
 				63C40713260B830B00BC6070 /* SigninMessage.swift */,
+				63C40720260F513700BC6070 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -546,13 +546,13 @@
 				729CC96025EFB4F6008771DA /* Person.swift in Sources */,
 				729CC94625EFB4E2008771DA /* PersonFooterView.swift in Sources */,
 				6396EDAC25F8F3AC00AA87E7 /* MyPage.swift in Sources */,
+				63C40721260F513700BC6070 /* Post.swift in Sources */,
 				729CC96425EFB4F6008771DA /* NavView.swift in Sources */,
 				63C40704260B69FF00BC6070 /* SigninViewModel.swift in Sources */,
 				63C40714260B830B00BC6070 /* SigninMessage.swift in Sources */,
 				729CC94525EFB4E2008771DA /* FooterAction.swift in Sources */,
 				63C40719260B8FB600BC6070 /* AuthToken.swift in Sources */,
 				6396ED9D25F1267D00AA87E7 /* LoginView.swift in Sources */,
-				63C406F725FF9A5400BC6070 /* Post.swift in Sources */,
 				729CC95E25EFB4F6008771DA /* ChangeImageColor.swift in Sources */,
 				6396EDC525FF928400AA87E7 /* TagedPosts.swift in Sources */,
 				729CC96225EFB4F6008771DA /* StoryView.swift in Sources */,

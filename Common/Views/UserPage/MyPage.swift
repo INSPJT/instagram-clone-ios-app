@@ -172,25 +172,25 @@ struct myPostsView : View {
     }
 }
 
-struct PostsDatas : View {
-    @Binding var data : [Post] = nil
-    
-    var body: some View {
-        VStack(spacing: 3){
-            ForEach(0..<data.postsURL.count/3){i in
-                HStack(spacing: 3){
-                    ForEach(0..<3){j in
-                        let idx : Int = i + j + (i * 2)
-
-                        if  idx < data.postsURL.count{
-                            MyPostsContentView(imageURL: data.postsURL[idx].imageURL)
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//struct PostsDatas : View {
+//    @Binding var data : [Post] = nil
+//    
+//    var body: some View {
+//        VStack(spacing: 3){
+//            ForEach(0..<data.postsURL.count/3){i in
+//                HStack(spacing: 3){
+//                    ForEach(0..<3){j in
+//                        let idx : Int = i + j + (i * 2)
+//
+//                        if  idx < data.postsURL.count{
+//                            MyPostsContentView(imageURL: data.postsURL[idx].imageURL)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
 
 
 //struct MyPageContentView_Previews: PreviewProvider {
