@@ -351,10 +351,10 @@
 		729CC95325EFB4F6008771DA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63C40718260B8FB600BC6070 /* AuthToken.swift */,
 				729CC95425EFB4F6008771DA /* Person.swift */,
 				63C406F625FF9A5400BC6070 /* Post.swift */,
 				63C40713260B830B00BC6070 /* SigninMessage.swift */,
-				63C40718260B8FB600BC6070 /* AuthToken.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
