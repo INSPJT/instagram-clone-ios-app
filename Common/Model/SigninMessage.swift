@@ -7,13 +7,13 @@
 
 import Foundation
 
-final class SigninMessage: Codable{
+final class SigninMessage: Encodable{
     
-    var username : String
+    var email : String
     var password : String
     
-    init(username: String, password: String) {
-        self.username = username
+    init(email: String, password: String) {
+        self.email = email
         self.password = password
     }
 }

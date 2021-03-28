@@ -30,13 +30,24 @@ struct MyPageContentView : View {
             VStack(spacing: 0){
                 InfoHeader()
                 
+                Spacer()
                 UserInfo()
                 
+                Spacer()
                 myPostsView(index: self.$index)
                 
                 Spacer()
+                ZStack{
+                    // 밀고 당기는거 수정해야함.
+                    PostsDatas().opacity(self.index == 0 ? 1 : 0)
+                        .transition(.slide)
+                    TagedPostsDatas().opacity(self.index == 1 ? 1 : 0)
+                        .transition(.slide)
+                }
+                Spacer()
             }
         }
+//        .ignoresSafeArea()
     }
 }
 
@@ -72,7 +83,7 @@ struct InfoHeader : View {
 struct UserInfo : View {
     var body: some View{
         let width = (UIScreen.main.bounds.width/2)
-        VStack{
+        VStack(spacing: 4){
             HStack{
                 PersonThumb(person: myInfo, width: 90, lineWidth: 3)
                     .padding(.leading, 10)
@@ -149,7 +160,9 @@ struct myPostsView : View {
         VStack{
             HStack{
                 Button(action: {
-                    self.index = 0
+                    withAnimation{
+                        self.index = 0
+                    }
                 }) {
                     VStack{
                         Image(systemName: "squareshape.split.3x3")
@@ -159,7 +172,9 @@ struct myPostsView : View {
                     }
                 }
                 Button(action: {
-                    self.index = 1
+                    withAnimation{
+                        self.index = 1
+                    }
                 }) {
                     VStack{
                         Image(systemName: "person.crop.square.fill")
@@ -170,34 +185,54 @@ struct myPostsView : View {
                  }
             }
         }
+        .padding(.bottom, 1)
     }
 }
 
-//struct PostsDatas : View {
-//    @Binding var data : [Post] = nil
-//
-//    var body: some View {
-//        VStack(spacing: 3){
-//            ForEach(0..<data.postsURL.count/3){i in
-//                HStack(spacing: 3){
-//                    ForEach(0..<3){j in
-//                        let idx : Int = i + j + (i * 2)
-//
-//                        if  idx < data.postsURL.count{
-//                            MyPostsContentView(imageURL: data.postsURL[idx].imageURL)
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
+struct PostsDatas : View {
+    // ViewModel 에서 데이터 따올 때 수정해야함.
+    //@Binding~~~ 함수 재활용하자..
+    var body: some View {
+        VStack(spacing: 3){
+            ForEach(0..<PostModel.PostModelsURL.count/3){i in
+                HStack(spacing: 3){
+                    ForEach(0..<3){j in
+                        let idx : Int = i + j + (i * 2)
+
+                        if  idx < PostModel.PostModelsURL.count{
+                            MyPostsContentView(imageURL: PostModel.PostModelsURL[idx].imageURL)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct TagedPostsDatas : View {
+    // ViewModel 에서 데이터 따올 때 수정해야함.
+    //@Binding~~~ 함수 재활용하자..
+    var body: some View {
+        VStack(spacing: 3){
+            ForEach(0..<PostModel.taggedURL.count/3){i in
+                HStack(spacing: 3){
+                    ForEach(0..<3){j in
+                        let idx : Int = i + j + (i * 2)
+                        if  idx < PostModel.taggedURL.count{
+                            MyPostsContentView(imageURL: PostModel.taggedURL[idx].imageURL)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
-//struct MyPageContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MyPageContentView()
-//    }
-//}
-//
-//
+struct MyPageContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        MyPageContentView()
+    }
+}
+
+

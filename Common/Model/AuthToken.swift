@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class AuthToken: Codable{
+final class AuthToken: Decodable{
     
     var grantType : String
     var accessToken : String
