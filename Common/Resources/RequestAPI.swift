@@ -17,8 +17,8 @@ struct APIRequest {
     let resourceURL : URL
     
     init(endpoint: String) {
-        let resourceString = "http://117.17.196.61/\(endpoint)"
-        //let resourceString = "http://www.yurivon.ml/\(endpoint)"
+        
+        let resourceString = "https://yurivon.ml/\(endpoint)"
         guard let resourceURL = URL(string: resourceString) else {fatalError()}
         
         self.resourceURL = resourceURL
@@ -27,24 +27,24 @@ struct APIRequest {
     func signin(_ requestBody:SigninMessage, completion: @escaping(Result<AuthToken, APIError>) -> Void) {
         
         do{
-            var request = URLRequest(url: URL(string:"http://117.17.196.61/auth/signin")!)
+            var request = URLRequest(url: URL(string:"https://yurivon.ml/auth/signin")!)
             request.httpMethod = "POST"
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpBody = try JSONEncoder().encode(requestBody)
             request.timeoutInterval = 20
             print(request.httpMethod!)
             
             URLSession.shared.dataTask(with: request) { (data, response, error) in
-                
-                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                guard error == nil else {
                     
                     completion(.failure(.responseProblem))
                     return
                 }
                 
                 do {
-                    let responseData = try JSONDecoder().decode(AuthToken.self, from: jsonData)
-                    completion(.success(responseData))
+                    let responseData = try JSONSerialization.jsonObject(with: data!, options: [])
+                    print(responseData)
+                    //completion(.success(.))
                 } catch {
                     completion(.failure(.decodingPorblem))
                 }
@@ -54,4 +54,34 @@ struct APIRequest {
             completion(.failure(.encodingProblem))
         }
     }
+    
+//    func signup(_ requestBody:SignupMessage, completion: @escaping(Result<String, APIError) -> Void) {
+//        do{
+//            var request = URLRequest(url: URL(string:"https://yurivon.ml/auth/signup")!)
+//            request.httpMethod = "POST"
+//            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//            request.httpBody = try JSONEncoder().encode(requestBody)
+//            request.timeoutInterval = 20
+//            print(request.httpMethod!)
+//
+//            URLSession.shared.dataTask(with: request) { (data, response, error) in
+//                guard error == nil else {
+//
+//                    completion(.failure(.responseProblem))
+//                    return
+//                }
+//
+//                do {
+//                    let responseData = try JSONSerialization.jsonObject(with: data!, options: [])
+//                    print(responseData)
+//                    //completion(.success(.))
+//                } catch {
+//                    completion(.failure(.decodingPorblem))
+//                }
+//            }
+//            .resume()
+//        } catch {
+//            completion(.failure(.encodingProblem))
+//        }
+//    }
 }
