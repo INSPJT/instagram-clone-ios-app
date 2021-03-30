@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import Alamofire
 var line : some View{
     VStack {
         Divider().background(lightGreyColor)

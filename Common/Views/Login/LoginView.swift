@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Alamofire
 
 
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
@@ -97,7 +98,6 @@ struct LoginContentView: View {
             }
         }
     }
-    
     func Verify(){
         if self.email != "" && self.password != "" {
             let postRequest = APIRequest(endpoint: "auth/signin")

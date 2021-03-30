@@ -4,7 +4,7 @@
 //
 //  Created by 박건욱 on 2021/03/24.
 //
-
+import Alamofire
 import Foundation
 
 enum APIError:Error {
@@ -32,6 +32,7 @@ struct APIRequest {
             urlRequest.timeoutInterval = 20
             print(urlRequest.httpBody)
             URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+                
                 guard error == nil else {
                     
                     completion(.failure(.responseProblem))
@@ -39,8 +40,18 @@ struct APIRequest {
                 }
                 
                 do {
-                    let responseData = try JSONSerialization.jsonObject(with: data!, options: [])
-                    print(responseData)
+                    let responseData = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary
+                    guard let jsonObj = responseData else {
+                        return
+                    }
+                    let accessToken = jsonObj["accessToken"] as! String
+                    let refreshToken = jsonObj["accessToken"] as! String
+                    //let accessTokenExpiresIn = jsonObj["accessTokenExpiresIn"] as! String
+                    print("TOKEN : \(accessToken)  \(refreshToken)")
+                    let tk = TokenUtils()
+                    let url = "https://yurivon.ml/auth/signin"
+                    tk.create(url, account: "accessToken", value: accessToken)
+                    tk.create(url, account: "refreshToken", value: refreshToken)
                     //completion(.success(.))
                 } catch {
                     completion(.failure(.decodingPorblem))
@@ -51,7 +62,7 @@ struct APIRequest {
             completion(.failure(.encodingProblem))
         }
     }
-    
+
     func signup(_ requestBody:SignUpMessage, completion: @escaping(Result<SignUpMessage, APIError>) -> Void) {
         do{
             var urlRequest = URLRequest(url: resourceURL)
