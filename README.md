@@ -10,7 +10,7 @@ instagram ios app 클론 코딩
 2021-03-05 login page UI 개발 완료 - by Geonuk Park
 
 2021-03-10 UserPage/ MyPage 개발 - by Geonuk Park
-
+  - Dark Mode 대응 필요함
 2021-03-30 LoginView & SignUpView & 관련 API 개발 완료 - by GeonUk Park & Jiwoong Hwang
   - Alamofire 추가하였고 29일 및 30일 URLSession통해 받아온 JSON 파일 에서 refreshToken 및 Token 확인 및 저장 완료
   - 로그인 & 가입 이후 로직 생각해서 구현할 예정
