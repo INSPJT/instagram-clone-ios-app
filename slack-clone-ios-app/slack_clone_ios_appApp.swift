@@ -10,15 +10,12 @@ import SwiftUI
 
 @main
 struct slack_clone_ios_appApp: App {
-    @State private var isLogin = false
     
+    @StateObject var token = TokenStorage()
     var body: some Scene {
         WindowGroup {
-            if isLogin == false {
-                LoginContentView(isSignin : $isLogin)
-            } else{
-                ContentView()
-            }
+            ContentView(token: token)
         }
     }
+    
 }

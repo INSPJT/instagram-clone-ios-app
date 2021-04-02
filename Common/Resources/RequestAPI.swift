@@ -15,7 +15,6 @@ enum APIError:Error {
 
 struct APIRequest {
     let resourceURL : URL
-    
     init(endpoint: String) {
         let resourceString = "https://yurivon.ml/\(endpoint)"
         guard let resourceURL = URL(string: resourceString) else {fatalError()}
@@ -52,7 +51,8 @@ struct APIRequest {
                     let url = "https://yurivon.ml/auth/signin"
                     tk.create(url, account: "accessToken", value: accessToken)
                     tk.create(url, account: "refreshToken", value: refreshToken)
-                    //completion(.success(.))
+                    tk.read(url, account: "accessToken")
+                    completion(.success(.init(email: "HELLO", password: "WORLD")))
                 } catch {
                     completion(.failure(.decodingPorblem))
                 }

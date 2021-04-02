@@ -21,6 +21,8 @@
 		63D8AE5B25CD86CE004F9F5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D8AE5A25CD86CE004F9F5D /* Preview Assets.xcassets */; };
 		63D8AE6625CD86CE004F9F5D /* slack_clone_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8AE6525CD86CE004F9F5D /* slack_clone_ios_appTests.swift */; };
 		63D8AE7125CD86CE004F9F5D /* slack_clone_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8AE7025CD86CE004F9F5D /* slack_clone_ios_appUITests.swift */; };
+		720823252614CC2F0027A241 /* MainStrory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720823242614CC2F0027A241 /* MainStrory.swift */; };
+		7208232A2614E3690027A241 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720823292614E3690027A241 /* TokenStorage.swift */; };
 		72168A42261362D200D0AC16 /* AlamoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72168A41261362D200D0AC16 /* AlamoRequest.swift */; };
 		7221BDA225EFB42D00F6F1A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221BDA125EFB42D00F6F1A7 /* ContentView.swift */; };
 		728D36792610C511004EFA90 /* SignUpMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728D36782610C511004EFA90 /* SignUpMessage.swift */; };
@@ -90,6 +92,8 @@
 		63D8AE6C25CD86CE004F9F5D /* slack-clone-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "slack-clone-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D8AE7025CD86CE004F9F5D /* slack_clone_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slack_clone_ios_appUITests.swift; sourceTree = "<group>"; };
 		63D8AE7225CD86CE004F9F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		720823242614CC2F0027A241 /* MainStrory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStrory.swift; sourceTree = "<group>"; };
+		720823292614E3690027A241 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
 		72168A41261362D200D0AC16 /* AlamoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoRequest.swift; sourceTree = "<group>"; };
 		7221BDA125EFB42D00F6F1A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		728D36782610C511004EFA90 /* SignUpMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMessage.swift; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 				729CC95925EFB4F6008771DA /* Text */,
 				729CC95B25EFB4F6008771DA /* Nav */,
 				72A4CFEB260F7E4D005FDC36 /* SignUpView.swift */,
+				720823242614CC2F0027A241 /* MainStrory.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				72C8754426134AF700B5D720 /* TokenUtils.swift */,
+				720823292614E3690027A241 /* TokenStorage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -706,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				729CC95D25EFB4F6008771DA /* ImageInstaStyle.swift in Sources */,
+				720823252614CC2F0027A241 /* MainStrory.swift in Sources */,
 				7221BDA225EFB42D00F6F1A7 /* ContentView.swift in Sources */,
 				729CC94825EFB4E2008771DA /* NewsView.swift in Sources */,
 				729CC95F25EFB4F6008771DA /* TextInstaStyle.swift in Sources */,
@@ -734,6 +741,7 @@
 				728D36792610C511004EFA90 /* SignUpMessage.swift in Sources */,
 				6396EDC025FF926F00AA87E7 /* MyPosts.swift in Sources */,
 				72168A42261362D200D0AC16 /* AlamoRequest.swift in Sources */,
+				7208232A2614E3690027A241 /* TokenStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

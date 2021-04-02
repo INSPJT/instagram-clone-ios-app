@@ -25,62 +25,25 @@ struct SignUpView: View {
     @State var showingAlert: Bool = false
     @State var isSignup: Bool = false
     var body: some View {
-        VStack{
-            Spacer()
-            Text("InstaClone")
-                .font(.custom("OleoScript-Regular", size: 50))
-                .padding(.bottom, 20)
-            TextField("보여질 아이디", text: $displayId)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 3)
-                .padding(.horizontal, 10)
-            TextField("이메일", text: $email)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 3)
-                .padding(.horizontal, 10)
-            TextField("닉네임", text: $nickname)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 3)
-                .padding(.horizontal, 10)
-            SecureField("비밀번호", text: $password)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 3)
-                .padding(.horizontal, 10)
-            SecureField("비밀번호 확인", text: $repassword)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 3)
-                .padding(.horizontal, 10)
-            
-            Button(LocalizedStringKey("SignUP"), action:{
-                isCorrectPW = self.isCorrect()
-                if isCorrectPW{
-                    self.SignUP()
-                }
-                else{
-                    self.showingAlert = true
-                }
-                print("Is Button")
-            })
-            .font(.system(size:15))
-            .foregroundColor(.white)
-            .frame(width: 280, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            .background(Color.black)
-            .cornerRadius(5)
-            .alert(isPresented: $showingAlert) {
-                Alert(title: Text("에러"), message: Text("비밀번호 오류"), dismissButton: .default(Text("OK")))
+        
+        return NavigationView{
+            VStack{
+                Spacer()
+                Text("InstaClone")
+                    .font(.custom("OleoScript-Regular", size: 50))
+                    .padding(.bottom, 20)
+                DisplayId
+                Email
+                NickName
+                Password
+                RePassword
+                btn
+                Spacer()
+                Spacer()
+                    
             }
-            Spacer()
-            Spacer()
+//            .navigationBarHidden(true)
+//            .navigationBarBackButtonHidden(true)
         }
     }
     func isCorrect()->Bool{
@@ -110,7 +73,70 @@ struct SignUpView: View {
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+extension SignUpView{
+    var btn: some View{
+        Button(LocalizedStringKey("SignUP"), action:{
+            isCorrectPW = self.isCorrect()
+            if isCorrectPW{
+                self.SignUP()
+            }
+            else{
+                self.showingAlert = true
+            }
+            print("Is Button")
+        })
+        .font(.system(size:15))
+        .foregroundColor(.white)
+        .frame(width: 280, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        .background(Color.black)
+        .cornerRadius(5)
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("에러"), message: Text("비밀번호 오류"), dismissButton: .default(Text("OK")))
+        }
+    }
+    var DisplayId: some View{
+        TextField("보여질 아이디", text: $displayId)
+            .padding()
+            .background(lightGreyColor)
+            .cornerRadius(5.0)
+            .padding(.bottom, 3)
+            .padding(.horizontal, 10)
+    }
+    var Email: some View{
+        TextField("이메일", text: $email)
+            .padding()
+            .background(lightGreyColor)
+            .cornerRadius(5.0)
+            .padding(.bottom, 3)
+            .padding(.horizontal, 10)
+    }
+    var NickName: some View{
+        TextField("닉네임", text: $nickname)
+            .padding()
+            .background(lightGreyColor)
+            .cornerRadius(5.0)
+            .padding(.bottom, 3)
+            .padding(.horizontal, 10)
+    }
+    var Password: some View{
+        SecureField("비밀번호", text: $password)
+            .padding()
+            .background(lightGreyColor)
+            .cornerRadius(5.0)
+            .padding(.bottom, 3)
+            .padding(.horizontal, 10)
+    }
+    var RePassword: some View{
+        SecureField("비밀번호 확인", text: $repassword)
+            .padding()
+            .background(lightGreyColor)
+            .cornerRadius(5.0)
+            .padding(.bottom, 3)
+            .padding(.horizontal, 10)
+    }
+        
+}
+struct MyPostsContentView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
     }
